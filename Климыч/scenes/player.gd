@@ -22,6 +22,7 @@ func getInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = moveDirection * speed
 	
+#Тут комментарий!
 
 func updateAnimation():
 	if velocity.length() == 0:
