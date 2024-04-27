@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dshttwkda4hp7"]
+[gd_scene load_steps=44 format=3 uid="uid://dshttwkda4hp7"]
 
 [ext_resource type="Texture2D" uid="uid://hk0m4diged0n" path="res://art/TilesetFloor.png" id="1_bgoy4"]
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_y3pb8"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dvij4kmuqb1o7" path="res://scenes/TilesetVillageAbandoned.png" id="10_xetig"]
 [ext_resource type="Texture2D" uid="uid://csk1kxttdakis" path="res://scenes/TilesetWater.png" id="11_d33w5"]
 [ext_resource type="Texture2D" uid="uid://dbe2c8ayf11wj" path="res://scenes/TilesetDesert.png" id="12_2f00f"]
+[ext_resource type="PackedScene" uid="uid://d1m0vdngvhbov" path="res://scenes/lifepot.tscn" id="12_mw5di"]
 [ext_resource type="Texture2D" uid="uid://lxq1rwdyuj0o" path="res://scenes/TilesetDungeon.png" id="13_3nf7q"]
 [ext_resource type="Texture2D" uid="uid://cck3rwkf6bu1a" path="res://scenes/TilesetElement.png" id="14_udbcm"]
 [ext_resource type="Texture2D" uid="uid://j42td1soy1gv" path="res://scenes/TilesetField.png" id="15_6wndw"]
@@ -2542,7 +2543,7 @@ texture = ExtResource("2_t2gce")
 11:20/0/physics_layer_0/angular_velocity = 0.0
 0:0/size_in_atlas = Vector2i(2, 2)
 0:0/0 = 0
-0:0/0/texture_origin = Vector2i(-8, 8)
+0:0/0/texture_origin = Vector2i(-8, 7)
 0:0/0/y_sort_origin = 7
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -7978,6 +7979,10 @@ texture = ExtResource("11_d33w5")
 8:16/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:16/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_c0gxd"]
+resource_name = "Collectables"
+scenes/1/scene = ExtResource("12_mw5di")
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4mhc"]
 texture = ExtResource("8_7fivg")
 0:0/0 = 0
@@ -11352,6 +11357,7 @@ sources/14 = SubResource("TileSetAtlasSource_6ymu6")
 sources/15 = SubResource("TileSetAtlasSource_5smm1")
 sources/16 = SubResource("TileSetAtlasSource_h33lv")
 sources/17 = SubResource("TileSetAtlasSource_msa6s")
+sources/18 = SubResource("TileSetScenesCollectionSource_c0gxd")
 
 [node name="world" type="Node2D"]
 y_sort_enabled = true
@@ -11370,6 +11376,8 @@ layer_2/name = "trees"
 layer_2/y_sort_enabled = true
 layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array(458756, 1, 0, 131073, 1, 0, 65544, 1, 0, 1441799, 655363, 4, 1507335, 655363, 5, 1441800, 720899, 4, 1507336, 720899, 5, 1572872, 720899, 6, 1441801, 786435, 4, 1507337, 786435, 5, 1572873, 786435, 6, 1441802, 851971, 4, 1507338, 851971, 5)
+layer_3/name = "Collectables"
+layer_3/tile_data = PackedInt32Array(458760, 18, 65536, 1835017, 18, 65536, 589846, 18, 65536, 851981, 18, 65536)
 
 [node name="slime" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("5_ct3xg")]
 position = Vector2(178, 123)
