@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dshttwkda4hp7"]
+[gd_scene load_steps=46 format=3 uid="uid://dshttwkda4hp7"]
 
 [ext_resource type="Texture2D" uid="uid://hk0m4diged0n" path="res://art/TilesetFloor.png" id="1_bgoy4"]
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_y3pb8"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dvij4kmuqb1o7" path="res://scenes/TilesetVillageAbandoned.png" id="10_xetig"]
 [ext_resource type="Texture2D" uid="uid://csk1kxttdakis" path="res://scenes/TilesetWater.png" id="11_d33w5"]
 [ext_resource type="Texture2D" uid="uid://dbe2c8ayf11wj" path="res://scenes/TilesetDesert.png" id="12_2f00f"]
-[ext_resource type="PackedScene" path="res://scenes/lifepot.tscn" id="12_mw5di"]
+[ext_resource type="PackedScene" uid="uid://d1m0vdngvhbov" path="res://scenes/lifepot.tscn" id="12_mw5di"]
 [ext_resource type="Texture2D" uid="uid://lxq1rwdyuj0o" path="res://scenes/TilesetDungeon.png" id="13_3nf7q"]
 [ext_resource type="PackedScene" uid="uid://bi6wsqt7uyp5d" path="res://scenes/sword.tscn" id="13_sy282"]
 [ext_resource type="Texture2D" uid="uid://cck3rwkf6bu1a" path="res://scenes/TilesetElement.png" id="14_udbcm"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://doblq2el71hrh" path="res://scenes/TilesetFloor.png" id="16_v4f0y"]
 [ext_resource type="Texture2D" uid="uid://cgj3l3421pwhn" path="res://scenes/TilesetFloorB.png" id="17_nyic5"]
 [ext_resource type="Texture2D" uid="uid://01dvbn4c0gkm" path="res://scenes/TilesetFloorDetail.png" id="18_o4081"]
+[ext_resource type="PackedScene" uid="uid://cysp4p2fqumkm" path="res://scenes/inventory_gui.tscn" id="25_iqsl5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcx5o"]
 texture = ExtResource("1_bgoy4")
@@ -11414,6 +11415,8 @@ position = Vector2(-111, 32)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="heartsContainer" parent="CanvasLayer" instance=ExtResource("7_i4ek7")]
+
+[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("25_iqsl5")]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
