@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dshttwkda4hp7"]
+[gd_scene load_steps=45 format=3 uid="uid://dshttwkda4hp7"]
 
 [ext_resource type="Texture2D" uid="uid://hk0m4diged0n" path="res://art/TilesetFloor.png" id="1_bgoy4"]
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_y3pb8"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dbe2c8ayf11wj" path="res://scenes/TilesetDesert.png" id="12_2f00f"]
 [ext_resource type="PackedScene" uid="uid://d1m0vdngvhbov" path="res://scenes/lifepot.tscn" id="12_mw5di"]
 [ext_resource type="Texture2D" uid="uid://lxq1rwdyuj0o" path="res://scenes/TilesetDungeon.png" id="13_3nf7q"]
+[ext_resource type="PackedScene" uid="uid://bi6wsqt7uyp5d" path="res://scenes/sword.tscn" id="13_sy282"]
 [ext_resource type="Texture2D" uid="uid://cck3rwkf6bu1a" path="res://scenes/TilesetElement.png" id="14_udbcm"]
 [ext_resource type="Texture2D" uid="uid://j42td1soy1gv" path="res://scenes/TilesetField.png" id="15_6wndw"]
 [ext_resource type="Texture2D" uid="uid://doblq2el71hrh" path="res://scenes/TilesetFloor.png" id="16_v4f0y"]
@@ -7982,6 +7983,7 @@ texture = ExtResource("11_d33w5")
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_c0gxd"]
 resource_name = "Collectables"
 scenes/1/scene = ExtResource("12_mw5di")
+scenes/2/scene = ExtResource("13_sy282")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4mhc"]
 texture = ExtResource("8_7fivg")
@@ -11377,7 +11379,7 @@ layer_2/y_sort_enabled = true
 layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array(458756, 1, 0, 131073, 1, 0, 65544, 1, 0, 1441799, 655363, 4, 1507335, 655363, 5, 1441800, 720899, 4, 1507336, 720899, 5, 1572872, 720899, 6, 1441801, 786435, 4, 1507337, 786435, 5, 1572873, 786435, 6, 1441802, 851971, 4, 1507338, 851971, 5)
 layer_3/name = "Collectables"
-layer_3/tile_data = PackedInt32Array(458760, 18, 65536, 1835017, 18, 65536, 589846, 18, 65536, 851981, 18, 65536)
+layer_3/tile_data = PackedInt32Array(458760, 18, 65536, 1835017, 18, 65536, 589846, 18, 65536, 851981, 18, 65536, 262151, 18, 131072, 524306, 18, 131072, 851978, 18, 131072, 589826, 18, 131072)
 
 [node name="slime" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("5_ct3xg")]
 position = Vector2(178, 123)
