@@ -12,6 +12,8 @@ signal healthChanged
 
 @export var knockbackPower: int = 300
 
+@export var inventory: Inventory
+
 var isHurt: bool = false
 
 
