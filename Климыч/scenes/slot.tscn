@@ -9,7 +9,6 @@ offset_right = 20.0
 offset_bottom = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 1)
 texture = ExtResource("1_vftfo")
 centered = false
 vframes = 2
