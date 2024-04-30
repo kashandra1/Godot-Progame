@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dvij4kmuqb1o7" path="res://scenes/TilesetVillageAbandoned.png" id="10_xetig"]
 [ext_resource type="Texture2D" uid="uid://csk1kxttdakis" path="res://scenes/TilesetWater.png" id="11_d33w5"]
 [ext_resource type="Texture2D" uid="uid://dbe2c8ayf11wj" path="res://scenes/TilesetDesert.png" id="12_2f00f"]
-[ext_resource type="PackedScene" uid="uid://d1m0vdngvhbov" path="res://scenes/lifepot.tscn" id="12_mw5di"]
+[ext_resource type="PackedScene" path="res://scenes/lifepot.tscn" id="12_mw5di"]
 [ext_resource type="Texture2D" uid="uid://lxq1rwdyuj0o" path="res://scenes/TilesetDungeon.png" id="13_3nf7q"]
 [ext_resource type="PackedScene" uid="uid://bi6wsqt7uyp5d" path="res://scenes/sword.tscn" id="13_sy282"]
 [ext_resource type="Texture2D" uid="uid://cck3rwkf6bu1a" path="res://scenes/TilesetElement.png" id="14_udbcm"]
@@ -1904,7 +1904,7 @@ texture = ExtResource("2_t2gce")
 4:9/0 = 0
 4:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:9/0/physics_layer_0/angular_velocity = 0.0
-4:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6.875, 5.75, 8, 6.75, 6, 5.375, 4.125, 6.5, 2.25, 6.625, -0.125, -8, -1.25, -8, 1.375, -5.875, 3, -5.75, 4.125, -6.875, 5.75)
+4:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6.875, 5.75, 8, 6.75, 6, 5.375, 4.125, 6.5, 2.25, 6.625, -0.125, -8, -0.375, -8, 0.0625, -8, 1.375, -5.875, 3, -5.75, 4.125, -6.875, 5.75)
 5:9/0 = 0
 5:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:9/0/physics_layer_0/angular_velocity = 0.0
@@ -11407,7 +11407,7 @@ layer_1/tile_data = PackedInt32Array(458754, 393217, 11, 327681, 393217, 11, 524
 layer_2/name = "trees"
 layer_2/y_sort_enabled = true
 layer_2/z_index = 1
-layer_2/tile_data = PackedInt32Array(458756, 1, 0, 131073, 1, 0, 65544, 1, 0, 1441799, 655363, 4, 1507335, 655363, 5, 1441800, 720899, 4, 1507336, 720899, 5, 1572872, 720899, 6, 1441801, 786435, 4, 1507337, 786435, 5, 1572873, 786435, 6, 1441802, 851971, 4, 1507338, 851971, 5)
+layer_2/tile_data = PackedInt32Array(458756, 1, 0, 131073, 1, 0, 65544, 1, 0, 1441799, 655363, 4, 1507335, 655363, 5, 1441800, 720899, 4, 1507336, 720899, 5, 1572872, 720899, 6, 1441801, 786435, 4, 1507337, 786435, 5, 1572873, 786435, 6, 1441802, 851971, 4, 1507338, 851971, 5, 917510, 262145, 9)
 layer_3/name = "Collectables"
 layer_3/tile_data = PackedInt32Array(458760, 18, 65536, 1835017, 18, 65536, 589846, 18, 65536, 851981, 18, 65536, 262151, 18, 131072, 524306, 18, 131072, 851978, 18, 131072, 589826, 18, 131072)
 layer_4/name = "decorates"
@@ -11426,10 +11426,9 @@ position = Vector2(120, -72)
 
 [node name="player" parent="TileMap" instance=ExtResource("3_54l7w")]
 position = Vector2(107, 79)
+speed = 205
 
 [node name="Camera2D" type="Camera2D" parent="TileMap/player" node_paths=PackedStringArray("tilemap")]
-limit_left = 0
-limit_top = 0
 limit_right = 480
 limit_bottom = 288
 script = ExtResource("4_tt0hw")
@@ -11467,7 +11466,7 @@ grow_vertical = 2
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-15, -80, -18, 462, 336, 463, 340, 347, 389, 352, 386, 336, 419, 338, 422, 319, 448, 319, 451, 292, 479, 292, 489, 271, 452, 273, 454, -115, 418, -154, 224, -162, 180, -165, 131, -162, 93, -161, 60, -162, 25, -164, -11, -159, -21, -103, -13, -93, -87, -150, 127, -240, 356, -198, 512, -158, 574, 18, 597, 180, 558, 359, 351, 534, 1, 556, -208, 501, -191, 23, -112, -59, -107, -103)
+polygon = PackedVector2Array(-14, -94, -18, 462, 336, 463, 340, 347, 389, 352, 386, 336, 419, 338, 422, 319, 448, 319, 451, 292, 479, 292, 489, 271, 452, 273, 451, -110, 418, -154, 224, -162, 180, -165, 131, -162, 93, -161, 60, -162, 25, -164, -11, -159, -15, -97, -13, -93, -87, -150, 127, -240, 356, -198, 512, -158, 574, 18, 597, 180, 558, 359, 351, 534, 1, 556, -208, 501, -191, 23, -112, -59, -107, -103)
 
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
 [connection signal="opened" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opened"]
