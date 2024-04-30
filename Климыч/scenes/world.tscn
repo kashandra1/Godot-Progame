@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dvij4kmuqb1o7" path="res://scenes/TilesetVillageAbandoned.png" id="10_xetig"]
 [ext_resource type="Texture2D" uid="uid://csk1kxttdakis" path="res://scenes/TilesetWater.png" id="11_d33w5"]
 [ext_resource type="Texture2D" uid="uid://dbe2c8ayf11wj" path="res://scenes/TilesetDesert.png" id="12_2f00f"]
-[ext_resource type="PackedScene" path="res://scenes/lifepot.tscn" id="12_mw5di"]
+[ext_resource type="PackedScene" uid="uid://di4eo2mfklk7s" path="res://scenes/lifepot.tscn" id="12_mw5di"]
 [ext_resource type="Texture2D" uid="uid://lxq1rwdyuj0o" path="res://scenes/TilesetDungeon.png" id="13_3nf7q"]
 [ext_resource type="PackedScene" uid="uid://bi6wsqt7uyp5d" path="res://scenes/sword.tscn" id="13_sy282"]
 [ext_resource type="Texture2D" uid="uid://cck3rwkf6bu1a" path="res://scenes/TilesetElement.png" id="14_udbcm"]
