@@ -11360,8 +11360,8 @@ layer_5/tile_data = PackedInt32Array(-458753, 1376257, 14, -393217, 1376257, 15,
 
 [node name="slime" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("5_ct3xg")]
 position = Vector2(178, 123)
-collision_layer = 3
-collision_mask = 3
+collision_layer = 2
+collision_mask = 2
 endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="TileMap/slime"]
@@ -11369,7 +11369,8 @@ position = Vector2(120, -72)
 
 [node name="player" parent="TileMap" instance=ExtResource("3_54l7w")]
 position = Vector2(107, 79)
-speed = 205
+speed = 50
+knockbackPower = 600
 inventory = ExtResource("23_f2ika")
 
 [node name="Camera2D" type="Camera2D" parent="TileMap/player" node_paths=PackedStringArray("tilemap")]
@@ -11381,8 +11382,8 @@ tilemap = NodePath("../..")
 [node name="slime2" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("5_ct3xg")]
 modulate = Color(0.670588, 1, 0.239216, 1)
 position = Vector2(119, 143)
-collision_layer = 3
-collision_mask = 3
+collision_layer = 2
+collision_mask = 2
 endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="TileMap/slime2"]
