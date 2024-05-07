@@ -11425,6 +11425,7 @@ grow_vertical = 2
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(58, 23)
 polygon = PackedVector2Array(-14, -94, -16, 466, 336, 463, 338, 352, 389, 352, 386, 336, 419, 338, 422, 319, 448, 319, 451, 292, 479, 292, 489, 271, 452, 273, 451, -110, 418, -154, 224, -162, 180, -165, 131, -162, 93, -161, 60, -162, 25, -164, -11, -159, -15, -97, -13, -93, -87, -150, 127, -240, 356, -198, 512, -158, 574, 18, 597, 180, 558, 359, 351, 534, 1, 556, -208, 501, -191, 23, -112, -59, -107, -103)
 
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
