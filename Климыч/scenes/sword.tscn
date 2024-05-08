@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bi6wsqt7uyp5d"]
 
-[ext_resource type="PackedScene" path="res://scenes/collectable.tscn" id="1_1dsil"]
+[ext_resource type="PackedScene" uid="uid://fklsrgs15yif" path="res://scenes/collectable.tscn" id="1_1dsil"]
 [ext_resource type="Resource" uid="uid://do72tnxr36uw3" path="res://inventory/items/sword.tres" id="2_5ybiv"]
 [ext_resource type="Texture2D" uid="uid://k061xlr7toi2" path="res://scenes/Sprite.png" id="2_qsx0y"]
 

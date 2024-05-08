@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dshttwkda4hp7"]
+[gd_scene load_steps=49 format=3 uid="uid://dshttwkda4hp7"]
 
 [ext_resource type="Texture2D" uid="uid://hk0m4diged0n" path="res://art/TilesetFloor.png" id="1_bgoy4"]
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_y3pb8"]
@@ -27,6 +27,7 @@
 [ext_resource type="Resource" uid="uid://byd5otsnhpl31" path="res://inventory/playerInventory.tres" id="23_f2ika"]
 [ext_resource type="Script" path="res://scenes/CanvasLayer.gd" id="24_w7ok7"]
 [ext_resource type="PackedScene" uid="uid://cgqg322q0cqck" path="res://scenes/inventory_gui.tscn" id="25_iqsl5"]
+[ext_resource type="PackedScene" uid="uid://d2i5s06488uc5" path="res://scenes/vladislav ewgenevich.tscn" id="28_5gf6r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcx5o"]
 texture = ExtResource("1_bgoy4")
@@ -11427,6 +11428,9 @@ grow_vertical = 2
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(58, 23)
 polygon = PackedVector2Array(-14, -94, -16, 466, 336, 463, 338, 352, 389, 352, 386, 336, 419, 338, 422, 319, 448, 319, 451, 292, 479, 292, 489, 271, 452, 273, 451, -110, 418, -154, 224, -162, 180, -165, 131, -162, 93, -161, 60, -162, 25, -164, -11, -159, -15, -97, -13, -93, -87, -150, 127, -240, 356, -198, 512, -158, 574, 18, 597, 180, 558, 359, 351, 534, 1, 556, -208, 501, -191, 23, -112, -59, -107, -103)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("28_5gf6r")]
+position = Vector2(238, 199)
 
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
 [connection signal="opened" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opened"]
