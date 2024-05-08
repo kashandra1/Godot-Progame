@@ -11391,6 +11391,7 @@ inventory = ExtResource("23_f2ika")
 [node name="Camera2D" type="Camera2D" parent="TileMap/player" node_paths=PackedStringArray("tilemap")]
 limit_right = 480
 limit_bottom = 288
+position_smoothing_enabled = true
 script = ExtResource("4_tt0hw")
 tilemap = NodePath("../..")
 
