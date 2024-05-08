@@ -87,11 +87,14 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4defj"]
-size = Vector2(20, 32)
+size = Vector2(13, 17)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 position = Vector2(-10, -12)
 texture = ExtResource("1_tcsa1")
 hframes = 12
@@ -103,5 +106,5 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -16)
+position = Vector2(0.5, -8.5)
 shape = SubResource("RectangleShape2D_4defj")
