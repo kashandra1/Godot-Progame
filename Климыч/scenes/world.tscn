@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dshttwkda4hp7"]
+[gd_scene load_steps=50 format=3 uid="uid://dshttwkda4hp7"]
 
 [ext_resource type="Texture2D" uid="uid://hk0m4diged0n" path="res://art/TilesetFloor.png" id="1_bgoy4"]
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_y3pb8"]
@@ -28,6 +28,7 @@
 [ext_resource type="Script" path="res://scenes/CanvasLayer.gd" id="24_w7ok7"]
 [ext_resource type="PackedScene" uid="uid://cgqg322q0cqck" path="res://scenes/inventory_gui.tscn" id="25_iqsl5"]
 [ext_resource type="PackedScene" uid="uid://d2i5s06488uc5" path="res://scenes/vladislav ewgenevich.tscn" id="28_5gf6r"]
+[ext_resource type="Script" path="res://scenes/vladislav ewgenevich.gd" id="29_rldmi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcx5o"]
 texture = ExtResource("1_bgoy4")
@@ -11432,6 +11433,7 @@ polygon = PackedVector2Array(-22, 273, -16, 474, 336, 463, 338, 352, 389, 352, 3
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("28_5gf6r")]
 position = Vector2(238, 199)
+script = ExtResource("29_rldmi")
 
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
 [connection signal="opened" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opened"]

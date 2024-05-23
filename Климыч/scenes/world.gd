@@ -9,8 +9,6 @@ func _ready():
 	player.healthChanged.connect(heartsContainer.updateHearts)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 
 func _on_inventory_gui_closed():
@@ -19,3 +17,6 @@ func _on_inventory_gui_closed():
 
 func _on_inventory_gui_opened():
 	get_tree().paused = true
+
+func _process(delta):
+	pass
