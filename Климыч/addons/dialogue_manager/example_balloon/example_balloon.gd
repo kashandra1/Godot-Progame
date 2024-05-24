@@ -13,6 +13,8 @@ extends CanvasLayer
 
 ## The dialogue resource
 var resource: DialogueResource
+var example_ballon = null
+var dialogue_manager = get_node("path_to_dialogue_manager")
 
 ## Temporary game states
 var temporary_game_states: Array = []
@@ -59,6 +61,7 @@ var dialogue_line: DialogueLine:
 			dialogue_label.type_out()
 			await dialogue_label.finished_typing
 
+
 		# Wait for input
 		if dialogue_line.responses.size() > 0:
 			balloon.focus_mode = Control.FOCUS_NONE
@@ -75,6 +78,8 @@ var dialogue_line: DialogueLine:
 		return dialogue_line
 
 
+
+
 func _ready() -> void:
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
@@ -87,6 +92,9 @@ func _ready() -> void:
 func _unhandled_input(_event: InputEvent) -> void:
 	# Only the balloon is allowed to handle input while it's showing
 	get_viewport().set_input_as_handled()
+
+
+
 
 
 func _notification(what: int) -> void:
@@ -103,7 +111,7 @@ func start(dialogue_resource: DialogueResource, title: String, extra_game_states
 	temporary_game_states =  [self] + extra_game_states
 	is_waiting_for_input = false
 	resource = dialogue_resource
-	self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
+	self.dialogue_sline = await resource.get_next_dialogue_line(title, temporary_game_states)
 
 
 ## Go to the next line

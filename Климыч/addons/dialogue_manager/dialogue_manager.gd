@@ -54,6 +54,7 @@ var include_singletons: bool = true
 
 ## Allow dialogue to call static methods/properties on classes
 var include_classes: bool = true
+var dialogue_manager = get_node("path_to_dialogue_manager")
 
 ## Manage translation behaviour
 var translation_source: TranslationSource = TranslationSource.Guess

@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://dshttwkda4hp7"]
+[gd_scene load_steps=52 format=3 uid="uid://dshttwkda4hp7"]
 
 [ext_resource type="Texture2D" uid="uid://hk0m4diged0n" path="res://art/TilesetFloor.png" id="1_bgoy4"]
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_y3pb8"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://cgqg322q0cqck" path="res://scenes/inventory_gui.tscn" id="25_iqsl5"]
 [ext_resource type="PackedScene" uid="uid://d2i5s06488uc5" path="res://scenes/vladislav ewgenevich.tscn" id="28_5gf6r"]
 [ext_resource type="Script" path="res://scenes/vladislav ewgenevich.gd" id="29_rldmi"]
+[ext_resource type="PackedScene" uid="uid://canif6xnre5x8" path="res://scenes/actinobale.tscn" id="30_iho81"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcx5o"]
 texture = ExtResource("1_bgoy4")
@@ -11346,6 +11347,8 @@ sources/16 = SubResource("TileSetAtlasSource_h33lv")
 sources/17 = SubResource("TileSetAtlasSource_msa6s")
 sources/18 = SubResource("TileSetScenesCollectionSource_c0gxd")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_t5ukh"]
+
 [node name="world" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_y3pb8")
@@ -11428,12 +11431,18 @@ grow_vertical = 2
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(6, 0)
+position = Vector2(-2, 2)
 polygon = PackedVector2Array(-22, 273, -16, 474, 336, 463, 338, 352, 389, 352, 386, 336, 419, 338, 422, 319, 448, 319, 451, 292, 479, 292, 489, 271, 452, 273, 451, -110, 418, -154, 224, -162, 180, -165, 131, -162, 93, -161, 60, -162, 25, -164, -11, -159, -15, -97, -311, -97, -87, -150, 127, -240, 356, -198, 512, -158, 574, 18, 597, 180, 558, 359, 351, 534, 1, 556, -144, 373, -394, 272, -313, -90, -304, 273)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("28_5gf6r")]
 position = Vector2(238, 199)
 script = ExtResource("29_rldmi")
+
+[node name="Actinobale" parent="CharacterBody2D" instance=ExtResource("30_iho81")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Actinobale"]
+position = Vector2(2, -1)
+shape = SubResource("CircleShape2D_t5ukh")
 
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
 [connection signal="opened" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opened"]
