@@ -1,7 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://ddtoo50h1mo73"]
+[gd_scene load_steps=17 format=3 uid="uid://ddtoo50h1mo73"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_50rbg"]
 [ext_resource type="Texture2D" uid="uid://coj8o8t5na7uj" path="res://с флешки/walk.png" id="2_dp4jq"]
+[ext_resource type="Shader" path="res://scenes/player.gdshader" id="3_yhs8x"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v15qg"]
+shader = ExtResource("3_yhs8x")
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/frequency = 0.35
+shader_parameter/highlight_speed = 6.0
+shader_parameter/highlight_width = 15.0
 
 [sub_resource type="Animation" id="Animation_6sj0u"]
 length = 0.001
@@ -20,7 +28,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Direction/ActinobalFindere/CollisionShape2D:position")
+tracks/1/path = NodePath("Direction/actionable_finder/CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -50,7 +58,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Direction/ActinobalFindere/CollisionShape2D:position")
+tracks/1/path = NodePath("Direction/actionable_finder/CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -80,7 +88,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Direction/ActinobalFindere/CollisionShape2D:position")
+tracks/1/path = NodePath("Direction/actionable_finder/CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -110,7 +118,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Direction/ActinobalFindere/CollisionShape2D:position")
+tracks/1/path = NodePath("Direction/actionable_finder/CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -140,7 +148,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Direction/ActinobalFindere/CollisionShape2D:position")
+tracks/1/path = NodePath("Direction/actionable_finder/CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -227,6 +235,7 @@ hframes = 8
 vframes = 4
 
 [node name="ColorRect" type="ColorRect" parent="Sprite2D"]
+material = SubResource("ShaderMaterial_v15qg")
 offset_left = -16.6848
 offset_top = -28.2304
 offset_right = 23.3152
@@ -259,11 +268,11 @@ libraries = {
 
 [node name="Direction" type="Marker2D" parent="."]
 
-[node name="ActinobalFindere" type="Area2D" parent="Direction"]
+[node name="actionable_finder" type="Area2D" parent="Direction"]
 collision_layer = 0
 collision_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActinobalFindere"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/actionable_finder"]
 shape = SubResource("CircleShape2D_mv3wb")
 
 [connection signal="area_entered" from="hurtBox" to="." method="_on_hurt_box_area_entered"]
