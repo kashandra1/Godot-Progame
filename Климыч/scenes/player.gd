@@ -34,15 +34,6 @@ func updateAnimation():
 		elif velocity.x > 0: direction = "Right"
 		elif velocity.y < 0: direction = "Up"
 		animations.play("walk" + direction)
-<<<<<<< HEAD
-		
-		
-func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
-		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/try.dialogue"), "start")
-		return
-=======
->>>>>>> parent of 91fa952 (сделал анимацию персонажу попытался добавить диалоги но он стал выдавать ошибку при попытке сохранить сцену мира)
 
 
 func handleCollision():

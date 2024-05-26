@@ -1,12 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://bi6wsqt7uyp5d"]
+[gd_scene load_steps=7 format=3 uid="uid://bi6wsqt7uyp5d"]
 
-[ext_resource type="PackedScene" path="res://scenes/collectable.tscn" id="1_1dsil"]
+[ext_resource type="PackedScene" uid="uid://fklsrgs15yif" path="res://scenes/collectable.tscn" id="1_1dsil"]
 [ext_resource type="Resource" uid="uid://do72tnxr36uw3" path="res://inventory/items/sword.tres" id="2_5ybiv"]
 [ext_resource type="Texture2D" uid="uid://k061xlr7toi2" path="res://scenes/Sprite.png" id="2_qsx0y"]
+[ext_resource type="Shader" path="res://scenes/lifepot.gdshader" id="3_m481h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4bpvl"]
 resource_local_to_scene = true
 size = Vector2(6, 16)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i68ej"]
+shader = ExtResource("3_m481h")
+shader_parameter/shine_color = Color(1, 1, 1, 0.25)
+shader_parameter/line_width = 0.1
+shader_parameter/angle = 0.785398
+shader_parameter/speed = 1.0
+shader_parameter/wait_cycles = 1.0
 
 [node name="sword" instance=ExtResource("1_1dsil")]
 itemRes = ExtResource("2_5ybiv")
@@ -15,4 +24,5 @@ itemRes = ExtResource("2_5ybiv")
 shape = SubResource("RectangleShape2D_4bpvl")
 
 [node name="Sprite2D" parent="." index="1"]
+material = SubResource("ShaderMaterial_i68ej")
 texture = ExtResource("2_qsx0y")
