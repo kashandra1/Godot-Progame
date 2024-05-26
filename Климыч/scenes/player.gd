@@ -9,7 +9,7 @@ signal healthChanged
 @onready var hurtBox = $hurtBox
 @export var maxHealth: int = 3
 @onready var currentHealth: int = maxHealth
-@onready var actionable_finder: Area2D = $Direction/ActinobalFindere
+
 @export var knockbackPower: int = 300
 
 @export var inventory: Inventory
@@ -34,12 +34,15 @@ func updateAnimation():
 		elif velocity.x > 0: direction = "Right"
 		elif velocity.y < 0: direction = "Up"
 		animations.play("walk" + direction)
+<<<<<<< HEAD
 		
 		
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/try.dialogue"), "start")
 		return
+=======
+>>>>>>> parent of 91fa952 (сделал анимацию персонажу попытался добавить диалоги но он стал выдавать ошибку при попытке сохранить сцену мира)
 
 
 func handleCollision():
@@ -84,4 +87,3 @@ func knockback(enemyVelocity: Vector2):
 
 func _on_hurt_box_area_exited(area):
 	pass
-

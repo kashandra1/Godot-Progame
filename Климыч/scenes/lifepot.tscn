@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://di4eo2mfklk7s"]
 
-[ext_resource type="PackedScene" uid="uid://fklsrgs15yif" path="res://scenes/collectable.tscn" id="1_8fmy3"]
+[ext_resource type="PackedScene" path="res://scenes/collectable.tscn" id="1_8fmy3"]
 [ext_resource type="Resource" uid="uid://cso6xnkiewlsm" path="res://inventory/items/lifepot.tres" id="2_e7w5y"]
 [ext_resource type="Texture2D" uid="uid://hs2hhy43mhkm" path="res://scenes/LifePot.png" id="2_pemiv"]
 [ext_resource type="Shader" path="res://scenes/player.gdshader" id="3_u2xlr"]
